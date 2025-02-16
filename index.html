@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventTix - Modern Event Ticketing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EventTix</div>
+            <div class="nav-links">
+                <a href="#events">Events</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Get Your Tickets</h1>
+            <p>Secure the best seats for your favorite events</p>
+        </section>
+
+        <section id="events" class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <img src="https://picsum.photos/400/200" alt="Concert Event">
+                    <div class="event-info">
+                        <h3>Summer Music Festival</h3>
+                        <p>Date: March 15, 2025</p>
+                        <p>Time: 7:00 PM</p>
+                        <button onclick="showSeatingMap('event1')">Select Seats</button>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="https://picsum.photos/400/200" alt="Theater Event">
+                    <div class="event-info">
+                        <h3>Broadway Show</h3>
+                        <p>Date: March 20, 2025</p>
+                        <p>Time: 8:00 PM</p>
+                        <button onclick="showSeatingMap('event2')">Select Seats</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="seating-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Select Your Seats</h2>
+                <div class="seating-info">
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="seat available"></div>
+                            <span>Available</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat selected"></div>
+                            <span>Selected</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat occupied"></div>
+                            <span>Occupied</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stage">STAGE</div>
+                <div class="seating-map" id="seating-map"></div>
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <p>Selected Seats: <span id="selected-seats"></span></p>
+                    <p>Total Price: $<span id="total-price">0</span></p>
+                    <button id="book-tickets" class="book-button">Book Tickets</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@eventtix.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 EventTix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
